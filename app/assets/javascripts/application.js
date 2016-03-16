@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('click', '.item__title', function( e ) {
+  e.preventDefault();
+  $('#' + $(this).data('id')).addClass('item-modal--visible');
+  $('body').addClass('modal-open');
+});
+
+$(document).on('click', '.close', function( e ) {
+  e.preventDefault();
+  $(this).parent().parent().parent().removeClass('item-modal--visible');
+  $('body').removeClass('modal-open');
+});

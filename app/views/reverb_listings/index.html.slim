@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title ReverbApi
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  
+  body
+    = yield
+
+    span
+      = @reverb_listing.each do |list_item|
+        .item
+          a.item__title href="#" data-id="#{list_item['id']}"
+            / img src="#{list_item[0]['photos[0]']['links']}"
+            span = list_item[0]['title']

@@ -6,7 +6,9 @@ class ReverbListingsController < ActionController::Base
   def index
     reverb_response = HTTParty.get('https://reverb.com/api/listings/all?query=bass&per_page=200')
 
-    reverb_response.each do |listing|
+    reverb_json = ActiveSupport::JSON.decode(reverb_response)
+
+    reverb_json.each do |listing|
       @reverb_listing = listing
     end
   end

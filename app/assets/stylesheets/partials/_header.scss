@@ -1,0 +1,23 @@
+.header {
+  background: $color-primary;
+  overflow: hidden;
+}
+
+.nav ul {
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+
+  @media screen and (min-width: $break-small) {
+    padding: 0 0 0 20px;
+    text-align: inherit;
+  }
+
+  a {
+    color: $color-white;
+    
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
