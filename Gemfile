@@ -17,7 +17,7 @@ group :development, :test do
   gem 'byebug', '3.4.0'
   gem 'web-console', '2.1.3'
   gem 'spring', '1.1.3'
-  gem 'better_errors', '2.1.1'
+  gem 'better_errors', '2.9.1'
   gem 'binding_of_caller', '0.7.3.pre1'
 end
 
